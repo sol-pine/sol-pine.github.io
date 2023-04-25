@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.9.0"/><style data-href="/styles.bff7a88e5d9515b11f64.css" data-identity="gatsby-global-css">.grvsc-container{-webkit-overflow-scrolling:touch;-webkit-font-feature-settings:normal;font-feature-settings:normal;border-radius:8px;border-radius:var(--grvsc-border-radius,8px);line-height:1.4;overflow:auto;padding-bottom:1rem;padding-bottom:var(--grvsc-padding-bottom,var(--grvsc-padding-v,1rem));padding-top:1rem;padding-top:var(--grvsc-padding-top,var(--grvsc-padding-v,1rem));position:relative}.grvsc-code{display:table}.grvsc-line{box-sizing:border-box;display:table-row;width:100%}.grvsc-line,.grvsc-line>*{position:relative}.grvsc-gutter-pad{display:table-cell;padding-left:.75rem;padding-left:calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem))/2)}.grvsc-gutter{display:table-cell;-webkit-user-select:none;user-select:none}.grvsc-gutter:before{content:attr(data-content)}.grvsc-source{display:table-cell;padding-left:1.5rem;padding-left:var(--grvsc-padding-left,var(--grvsc-padding-h,1.5rem));padding-right:1.5rem;padding-right:var(--grvsc-padding-right,var(--grvsc-padding-h,1.5rem))}.grvsc-source:empty:after{content:" ";-webkit-user-select:none;user-select:none}.grvsc-gutter+.grvsc-source{padding-left:.75rem;padding-left:calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem))/2)}.grvsc-has-line-highlighting>.grvsc-code>.grvsc-line:before{content:" ";position:absolute;width:100%}.grvsc-line-diff-add:before{background-color:var(--grvsc-line-diff-add-background-color,rgba(0,255,60,.2))}.grvsc-line-diff-del:before{background-color:var(--grvsc-line-diff-del-background-color,rgba(255,0,20,.2))}.grvsc-line-number{opacity:.7;padding:0 2px;text-align:right}</style><link rel="canonical" href="https://sol-pine.github.io/eslint-prettier-tutorial/" data-baseprotocol="https:" data-basehost="sol-pine.github.io"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 1o6qimn">.css-1o6qimn{width:730px;margin:0 auto;padding:0 20px;}@media (max-width: 730px){.css-1o6qimn{width:100%;}}</style><div class="css-1o6qimn e18gb9700"><style data-emotion="css-global yyg2et">@font-face{font-family:"Pretendard",sans-serif;font-style:normal;font-display:swap;font-weight:400;src:url("../fonts/Pretendard-Regular.subset.woff") format("woff"),url("../fonts/Pretendard-Regular.subset.woff2") format("woff2"),unicode-range:U+0020-007E;}@font-face{font-family:"Pretendard",sans-serif;font-style:normal;font-display:swap;font-weight:600;src:url("../fonts/Pretendard-SemiBold.subset.woff") format("woff"),url("../fonts/Pretendard-SemiBold.subset.woff2") format("woff2"),unicode-range:U+0020-007E;}*{padding:0;margin:0;box-sizing:border-box;font-family:"Pretendard",sans-serif;font-weight:400;color:#000000;}body{background:#FFFFFF;}code{color:#000000;}a,a:hover{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}button{border:none;background:none;cursor:pointer;}</style><style data-emotion="css 4fpl07">.css-4fpl07{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;width:100%;height:80px;}.css-4fpl07 .logo{font-size:30px;font-weight:600;}@media (max-width: 500px){.css-4fpl07 .logo{font-size:24px;}}.css-4fpl07 section{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:15px;}.css-4fpl07 button{font-size:15px;font-weight:400;}.css-4fpl07 .link{font-size:15px;font-weight:400;}</style><div class="css-4fpl07 euniwzm0"><a class="logo" href="/">🌞🌲log.</a><section></section></div><style data-emotion="css b6wrti">.css-b6wrti{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;}</style><div class="css-b6wrti evrmkiz0"><style data-emotion="css 1pozdso">.css-1pozdso{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;margin-top:30px;}.css-1pozdso .emoji{font-size:60px;}@media (max-width: 500px){.css-1pozdso .emoji{font-size:50px;}}.css-1pozdso .sm{font-size:14px;font-weight:400;margin-top:10px;}.css-1pozdso .title{font-size:30px;font-weight:600;margin-top:10px;}@media (max-width: 500px){.css-1pozdso .title{font-size:24px;}}</style><div class="css-1pozdso e1gnrp8h0"><div class="emoji">✨</div><div class="sm">2023년 02월 21일</div><div class="title">ESLint와 Prettier 사용법</div><div class="sm">시작이 반, 팀의 생산성을 높이는 가장 쉬운 방법</div></div><style data-emotion="css 4pv2o5">.css-4pv2o5{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;min-height:300px;margin-top:50px;font-size:16px;font-weight:400;}.css-4pv2o5 p{font-size:16px;font-weight:400;margin-bottom:24px;word-wrap:break-word;word-break:all;line-height:1.8;}.css-4pv2o5 strong{font-weight:700;}.css-4pv2o5 h1{font-size:25px;font-weight:600;margin:30px 0;}@media (max-width: 500px){.css-4pv2o5 h1{font-size:20px;}}.css-4pv2o5 h4{font-size:20px;font-weight:600;margin:28px 0;}@media (max-width: 500px){.css-4pv2o5 h4{font-size:18px;}}.css-4pv2o5 p a{-webkit-text-decoration:underline;text-decoration:underline;text-underline-position:under;}.css-4pv2o5 p>code,.css-4pv2o5 li>code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;padding:2px 8px;border-radius:8px;font-size:14px;background:#dfe2e5;word-wrap:break-word;word-break:all;}.css-4pv2o5 blockquote{border-left:5px solid #dfe2e5;margin:20px 0;padding-left:10px;}.css-4pv2o5 blockquote>p{color:#6a737d;font-weight:600;}.css-4pv2o5 ol,.css-4pv2o5 ul{padding-left:25px;}.css-4pv2o5 li>p,.css-4pv2o5 ol{line-height:1.8;margin:8px 0;}.css-4pv2o5 li{margin:8px 0;line-height:1.8;}.css-4pv2o5 li>a{line-height:1.8;margin:8px 0;-webkit-text-decoration:underline;text-decoration:underline;text-underline-position:under;}.css-4pv2o5 pre{width:100%;margin:20px auto;}.css-4pv2o5 pre .grvsc-line{background:#000c18;}.css-4pv2o5 pre .grvsc-source>span{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;width:100%;word-wrap:break-word;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:16px;}@media (max-width: 500px){.css-4pv2o5 pre .grvsc-source>span{font-size:14px;}}.css-4pv2o5 img{width:100%;margin:10px 0;}</style><div class="css-4pv2o5 esbj4710"><div class="markdown"><p>여러 명의 팀원이 한 프로젝트를 개발하다 보면 팀원마다 각기 다른 코딩 스타일을 가지고 있어 코드의 통일성이 무너지기 쉽습니다. 사전에 컨벤션을 아무리 정교하게 맞추어도 자동화가 되어있지 않은 한, 이를 개발자가 수동으로 일일이 지키기는 매우 어려운 일입니다. (실제로 Lint를 몰랐을 땐 이런 식으로도 해봤는데요.. 개발 속도도 느려지고 손목 건강, 정신 건강을 위해선 Lint 필수입니다!) 여러 사람이 각자 다른 스타일로 쓴 코드를 해석하는 것에 상당한 시간과 노력을 들인다면 당연히 팀의 생산성은 떨어질 수밖에 없습니다. 따라서, Linter와 Code Formatter를 사용하는 것은 팀으로 일하기 위한 개발자의 올바른 마음가짐입니다.</p>
+<p>자바스크립트에서는 Linter로는 ESLint를, Code Formatter로는 Prettier를 일반적으로 사용합니다. ESLint는 코드 자체의 문법 교정뿐만 아니라 코드 스타일링 기능도 포함하고 있지만 워낙 Prettier라는 강력한 Formatter가 존재하기에 Linting은 ESLint가 Formatting은 Prettier가 담당하도록 하는 것이 좋습니다.</p>
+<h1>ESLint</h1>
+<p>ESLint는 자바스크립트 코드의 오류나 버그를 미리 잡아주는 도구입니다. 개발자가 작성한 코드를 미리 정의해둔 규칙에 따라 검사해 코드 작성 시, 발생할 수 있는 문제점이나 실수를 미리 예방할 수 있습니다. 여기에서 규칙은 커스터마이징이 가능해 원하는 입맛대로 커스텀해서 적용할 수 있습니다.</p>
+<h1>Prettier</h1>
+<p>Prettier는 코드의 가독성을 높이기 위한 필수 도구입니다. 작성된 코드를 분석하고 스타일 가이드를 준수하도록 맞춰줍니다. 포맷팅 규칙 또한 커스터마이징할 수 있고 이를 정의함으로써 팀원 모두가 같은 코딩 스타일을 공유하고 사용할 수 있도록 해줍니다.</p>
+<p>그럼 ESLint부터 설정해보겠습니다! 개발 환경은 TypeScript와 React 기준입니다.</p>
+<h1>ESLint 설정하기 (with TypeScript)</h1>
+<ol>
+<li>우선, ESLint를 devDependencies에 설치합니다.</li>
+</ol>
+<pre class="grvsc-container abyss" data-language="bash" data-index="0"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">npm install eslint --save-dev</span></span></span></code></pre>
+<ol start="2">
+<li>추가 플러그인을 설치해줍니다.</li>
+</ol>
+<ul>
+<li><code>@typescript-eslint/parser</code> : 타입스크립트에 대한 AST 생성</li>
+<li><code>eslint-config-prettier</code> : eslint와 prettier 충돌 방지</li>
+<li><code>eslint-config-airbnb-typescript</code> : 저는 React를 사용할 것이라 eslint-config-airbnb를 선택했지만 eslint-config-airbnb-base를 사용하면 더욱 라이트하게 사용하실 수 있습니다. (React 규칙 미포함)</li>
+<li><code>eslint-plugin-react-hooks</code> : React hook 규칙</li>
+<li><code>eslint-plugin-import</code>, <code>eslint-import-resolver-typescript</code> : import/export 규칙</li>
+</ul>
+<pre class="grvsc-container abyss" data-language="bash" data-index="1"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">npm install @typescript-eslint/parser --save-dev</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">npm install eslint-config-prettier --save-dev</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">npm install eslint-config-airbnb-typescript --save-dev</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">npm install eslint-plugin-react-hooks --save-dev</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">npm install eslint-plugin-import --save-dev</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">npm install eslint-import-resolver-typescript --save-dev</span></span></span></code></pre>
+<ol start="3">
+<li><code>.eslintrc.js</code> 파일을 만들고 취향대로 규칙을 작성해줍니다.</li>
+</ol>
+<pre class="grvsc-container abyss" data-language="javascript" data-index="2"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">{</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk11">&quot;parser&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;@typescript-eslint/parser&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk11">&quot;plugins&quot;</span><span class="mtk1">: [</span><span class="mtk11">&quot;@typescript-eslint&quot;</span><span class="mtk1">, </span><span class="mtk11">&quot;react&quot;</span><span class="mtk1">, </span><span class="mtk11">&quot;import&quot;</span><span class="mtk1">],</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk11">&quot;extends&quot;</span><span class="mtk1">: [</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk11">&quot;prettier&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk11">&quot;airbnb-typescript&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk11">&quot;react-app&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk11">&quot;plugin:import/recommended&quot;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  ],</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk11">&quot;rules&quot;</span><span class="mtk1">: {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk11">&quot;@typescript-eslint/indent&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;off&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk11">&quot;no-var&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;error&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk11">&quot;no-multiple-empty-lines&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;error&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk11">&quot;eqeqeq&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;error&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk11">&quot;no-unused-vars&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;error&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk11">&quot;@typescript-eslint/comma-dangle&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;off&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk11">&quot;import/no-extraneous-dependencies&quot;</span><span class="mtk1">: [ </span><span class="mtk11">&quot;error&quot;</span><span class="mtk1">, { </span><span class="mtk11">&quot;devDependencies&quot;</span><span class="mtk1">: </span><span class="mtk4">false</span><span class="mtk1"> } ],</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk11">&quot;@typescript-eslint/consistent-type-imports&quot;</span><span class="mtk1">: [ </span><span class="mtk11">&quot;error&quot;</span><span class="mtk1">, { </span><span class="mtk11">&quot;prefer&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;type-imports&quot;</span><span class="mtk1"> } ],</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk11">&quot;react/function-component-definition&quot;</span><span class="mtk1">: [</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">          </span><span class="mtk4">2</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">          {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">            </span><span class="mtk11">&quot;namedComponents&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;function-declaration&quot;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">          }</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      ],</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk11">&quot;sort-imports&quot;</span><span class="mtk1">: [</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">          </span><span class="mtk11">&quot;error&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">          {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">              </span><span class="mtk11">&quot;ignoreCase&quot;</span><span class="mtk1">: </span><span class="mtk4">true</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">              </span><span class="mtk11">&quot;ignoreDeclarationSort&quot;</span><span class="mtk1">: </span><span class="mtk4">true</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">              </span><span class="mtk11">&quot;ignoreMemberSort&quot;</span><span class="mtk1">: </span><span class="mtk4">false</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">              </span><span class="mtk11">&quot;allowSeparatedGroups&quot;</span><span class="mtk1">: </span><span class="mtk4">true</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">          }</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      ],</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk11">&quot;import/order&quot;</span><span class="mtk1">: [</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">          </span><span class="mtk11">&quot;error&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">          {</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">              </span><span class="mtk11">&quot;groups&quot;</span><span class="mtk1">: [ [</span><span class="mtk11">&quot;builtin&quot;</span><span class="mtk1">, </span><span class="mtk11">&quot;external&quot;</span><span class="mtk1">], </span><span class="mtk11">&quot;internal&quot;</span><span class="mtk1">, </span><span class="mtk11">&quot;parent&quot;</span><span class="mtk1">, </span><span class="mtk11">&quot;sibling&quot;</span><span class="mtk1">, </span><span class="mtk11">&quot;index&quot;</span><span class="mtk1"> ],</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">              </span><span class="mtk11">&quot;alphabetize&quot;</span><span class="mtk1">: { </span><span class="mtk11">&quot;order&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;asc&quot;</span><span class="mtk1">, </span><span class="mtk11">&quot;caseInsensitive&quot;</span><span class="mtk1">: </span><span class="mtk4">true</span><span class="mtk1"> }</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">          }</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        ],</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk11">&quot;import/default&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;off&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk11">&quot;import/no-named-as-default-member&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;off&quot;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  },</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk11">&quot;parserOptions&quot;</span><span class="mtk1">: { </span><span class="mtk11">&quot;project&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;./tsconfig.json&quot;</span><span class="mtk1"> },</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">}</span></span></span></code></pre>
+<h1>Prettier 설정하기</h1>
+<ol>
+<li>ESLint와 마찬가지로 Prettier를 devDependencies에 설치합니다.</li>
+</ol>
+<pre class="grvsc-container abyss" data-language="bash" data-index="3"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">npm install prettier --save-dev</span></span></span></code></pre>
+<ol start="2">
+<li><code>.prettierrc</code> 파일을 만들고 규칙을 작성해줍니다.</li>
+</ol>
+<pre class="grvsc-container abyss" data-language="javascript" data-index="4"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">{</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">&quot;tabWidth&quot;</span><span class="mtk1">: </span><span class="mtk4">2</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">&quot;printWidth&quot;</span><span class="mtk1">: </span><span class="mtk4">80</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">&quot;singleQuote&quot;</span><span class="mtk1">: </span><span class="mtk4">true</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">&quot;trailingComma&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;es5&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">&quot;arrowParens&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;avoid&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">&quot;semi&quot;</span><span class="mtk1">: </span><span class="mtk4">true</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">&quot;bracketSpacing&quot;</span><span class="mtk1">: </span><span class="mtk4">true</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">&quot;endOfLine&quot;</span><span class="mtk1">: </span><span class="mtk11">&quot;lf&quot;</span><span class="mtk1">,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">}</span></span></span></code></pre>
+<p>Prettier의 다양한 옵션은 <a href="https://prettier.io/docs/en/options.html" target="_blank" rel="nofollow">Docs</a>를 참고하세요.</p>
+<h1>ESLint 적용이 안된다면?</h1>
+<ul>
+<li>VSCode 설정에서 “actions on save”를 검색해 Eslint › Code Actions On Save의 “settings.json에서 편집” 클릭 후, <code>"editor.codeActionsOnSave": { "source.fixAll.eslint": true }</code> 코드를 추가합니다.</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/105091138/231831931-957a9493-f73c-46e1-adec-6976e6e1f91a.png" alt="VSC 설정 체크"></p>
+<h1>Prettier 적용이 안된다면?</h1>
+<ul>
+<li>VSCode Prettier 확장 프로그램이 설치되어 있는지 확인합니다.</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/105091138/231827792-289de864-c775-4c01-8162-da0f8e033bf3.png" alt="VSC 확장"></p>
+<ul>
+<li>VSCode 설정에서 “format on save”를 검색해 Editor: Format On Save에 체크가 되어있는지 확인합니다.</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/105091138/231828984-a64f4304-eeb4-43a2-9ef7-b8079e74eca3.png" alt="VSC 설정 체크"></p>
+<h4>Reference</h4>
+<ul>
+<li><a href="https://eslint.org/docs/latest/use/" target="_blank" rel="nofollow">ESLint docs</a></li>
+<li><a href="https://prettier.io/docs/en/index.html" target="_blank" rel="nofollow">Prettier docs</a></li>
+</ul>
+<style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line > * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: ' ';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting > .grvsc-code > .grvsc-line::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .abyss { background-color: #000c18; }
+  .abyss .mtk1 { color: #6688CC; }
+  .abyss .mtk11 { color: #22AA44; }
+  .abyss .mtk4 { color: #F280D0; }
+  .abyss .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+</style></div></div><style data-emotion="css dxomt1">.css-dxomt1{margin-top:60px;}.css-dxomt1 .sectionWrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;width:100%;margin-top:50px;font-size:14px;font-weight:400;}</style><div class="css-dxomt1 e1qdyrhy0"><hr/><div class="sectionWrapper"><p>이전 글이 없습니다</p><a href="/">글 목록으로 돌아가기</a><p>다음 글이 없습니다</p></div></div></div><style data-emotion="css 1c2w1wp">.css-1c2w1wp{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;width:100%;margin-top:150px;position:relative;-webkit-transform:translateY(-100%);-moz-transform:translateY(-100%);-ms-transform:translateY(-100%);transform:translateY(-100%);}.css-1c2w1wp section{font-size:12px;}.css-1c2w1wp a{-webkit-text-decoration:underline;text-decoration:underline;}</style><div class="css-1c2w1wp eiigzzs0"><section>해솔로그<!-- -->ⓒ<a href="https://github.com/sol-pine">조해솔</a>, <!-- -->2023</section><section>Powered By gatsby with gh-pages</section></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/eslint-prettier-tutorial/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"polyfill\":[\"/polyfill-6b42219367d763212a52.js\"],\"app\":[\"/app-84b4cb76706f4180e536.js\"],\"component---src-pages-dev-404-page-tsx\":[\"/component---src-pages-dev-404-page-tsx-da33bdce9f5ca120b440.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-13d100053cd12842fe4d.js\"],\"component---src-templates-post-template-tsx\":[\"/component---src-templates-post-template-tsx-9bd31d37a169ba517a11.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="6635a5871958b99dc808";</script><script src="/webpack-runtime-761fe6589f2d65b4b936.js" nomodule></script><script src="/polyfill-6b42219367d763212a52.js" nomodule></script><script src="/webpack-runtime-761fe6589f2d65b4b936.js" async></script><script src="/framework-884d77d9b989f3cd4fc6.js" async></script><script src="/app-84b4cb76706f4180e536.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
