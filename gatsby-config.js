@@ -9,35 +9,76 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `해솔로그`,
+    description: `기록하는 습관, 확장되는 경험`,
+    author: `조해솔`,
+    github: `https://github.com/sol-pine`,
+    siteUrl: `https://sol-pine.github.io/`,
   },
   plugins: [
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `contents`,
+        path: `${__dirname}/contents`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-typescript`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        isTSX: true,
+        allExtensions: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: ["auto", "webp"],
+          quality: 100,
+          placeholder: "blurred",
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://sol-pine.github.io/`,
+        stripQueryString: true,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-vscode`,
+            options: {
+              theme: "Abyss",
+            },
+          },
+          {
+            resolve: `gatsby-remark-smartypants`,
+            options: {
+              dashes: `oldschool`,
+            },
+          },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {},
+          },
+          {
+            resolve: `gatsby-remark-external-links`,
+            options: {
+              target: "_blank",
+              rel: "nofollow",
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
   ],
 }

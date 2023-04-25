@@ -1,21 +1,42 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "solog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Sol",
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "gatsby": "^5.9.0",
+    "gatsby-plugin-canonical-urls": "^5.9.0",
+    "gatsby-plugin-emotion": "^8.9.0",
     "gatsby-plugin-image": "^3.9.0",
-    "gatsby-plugin-manifest": "^5.9.0",
     "gatsby-plugin-sharp": "^5.9.0",
+    "gatsby-plugin-typescript": "^5.9.0",
+    "gatsby-remark-copy-linked-files": "^6.9.0",
+    "gatsby-remark-external-links": "^0.0.4",
+    "gatsby-remark-highlight-code": "^3.3.0",
+    "gatsby-remark-images": "^7.9.0",
+    "gatsby-remark-smartypants": "^6.9.0",
+    "gatsby-remark-vscode": "^3.3.1",
     "gatsby-source-filesystem": "^5.9.0",
+    "gatsby-transformer-remark": "^6.9.0",
     "gatsby-transformer-sharp": "^5.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "prettier": "^2.8.7"
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "gh-pages": "^5.0.0",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.4"
   },
   "keywords": [
     "gatsby"
@@ -28,13 +49,14 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby build && gh-pages -d public -b main"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/sol-pine/sol-pine.github.io"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/sol-pine/sol-pine.github.io/issues"
   }
 }
