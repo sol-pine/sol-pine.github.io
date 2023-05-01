@@ -1,14 +1,14 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { parse } from "query-string";
 import TagList from "../components/tag/TagList";
+import { parse } from "query-string";
 
 export default function Tag() {
-  const { tag } = parse(location.search);
-  console.log(tag);
+  const parsed = typeof window !== "undefined" ? parse(location.search) : {};
+
   return (
     <Layout>
-      <TagList tag={tag} />
+      <TagList tag={parsed?.tag} />
     </Layout>
   );
 }

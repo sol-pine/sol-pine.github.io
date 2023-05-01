@@ -80,5 +80,6 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
   ],
-}
+};

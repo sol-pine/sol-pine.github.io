@@ -46,7 +46,7 @@ export default function TagList({ tag }: Props) {
         ← 모든 글
       </Link>
       <div className="title">
-        #{tag} ({postList.length})
+        #{tag} ({postList?.length})
       </div>
       {postList.length ? (
         <>
