@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
-import React, { Dispatch, SetStateAction, useCallback } from "react";
+import React from "react";
 
 export default function Header() {
   return (

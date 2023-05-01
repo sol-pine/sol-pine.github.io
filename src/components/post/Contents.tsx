@@ -62,7 +62,7 @@ const Base = styled.div`
   li > code {
     font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
     padding: 2px 8px;
-    border-radius: 8px;
+    border-radius: 3px;
     font-size: 14px;
     background: #dfe2e5;
     word-wrap: break-word;

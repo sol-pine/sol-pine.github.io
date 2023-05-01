@@ -18,7 +18,7 @@ type Data = {
           html: string;
           frontmatter: IFrontmatter;
         };
-      };
+      }[];
     };
     postList: { edges: { node: { fields: Fields } }[] };
   };
@@ -30,12 +30,13 @@ export default function PostTemplate({
     postList: { edges: listEdges },
   },
 }: Data) {
-  const { emoji, date, title, summary, html, currentSlug } = useMemo(
+  const { emoji, date, title, summary, tags, html, currentSlug } = useMemo(
     () => ({
       emoji: edges[0]?.node.frontmatter.emoji,
       date: edges[0]?.node.frontmatter.date,
       title: edges[0]?.node.frontmatter.title,
       summary: edges[0]?.node.frontmatter.summary,
+      tags: edges[0]?.node.frontmatter.tags,
       html: edges[0]?.node.html,
       currentSlug: edges[0]?.node.fields.slug,
     }),
@@ -47,7 +48,13 @@ export default function PostTemplate({
   return (
     <Layout>
       <Wrapper>
-        <Title emoji={emoji} date={date} title={title} summary={summary} />
+        <Title
+          emoji={emoji}
+          date={date}
+          title={title}
+          summary={summary}
+          tags={tags}
+        />
         <Contents html={html} />
         <PostFooter currentSlug={currentSlug} slugs={slugs} />
       </Wrapper>
@@ -77,6 +84,7 @@ export const queryMarkdownDataBySlug = graphql`
             emoji
             title
             summary
+            tags
           }
         }
       }

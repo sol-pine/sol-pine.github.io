@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "gatsby";
 import React from "react";
 
 type Props = {
@@ -6,15 +7,23 @@ type Props = {
   date: string;
   title: string;
   summary: string;
+  tags: string[];
 };
 
-export default function Title({ emoji, date, title, summary }: Props) {
+export default function Title({ emoji, date, title, summary, tags }: Props) {
   return (
     <Base>
       <div className="emoji">{emoji}</div>
       <div className="sm">{date}</div>
       <div className="title">{title}</div>
       <div className="sm">{summary}</div>
+      <section>
+        {tags.map(tag => (
+          <Link className="tag" key={tag} to={`/tag/?tag=${tag}`}>
+            #{tag}
+          </Link>
+        ))}
+      </section>
     </Base>
   );
 }
@@ -42,5 +51,14 @@ const Base = styled.div`
     @media (max-width: 500px) {
       font-size: 24px;
     }
+  }
+  section {
+    display: flex;
+    gap: 10px;
+  }
+  .tag {
+    font-size: 14px;
+    margin-top: 10px;
+    text-decoration: underline;
   }
 `;

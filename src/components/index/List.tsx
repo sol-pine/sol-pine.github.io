@@ -2,25 +2,26 @@ import styled from "@emotion/styled";
 import { graphql, useStaticQuery } from "gatsby";
 import React, { useMemo, useState } from "react";
 import { CATEGORY } from "../../constants";
-import PostItem from "./PostItem";
+import PostItem from "../../common/PostItem";
 
 export interface IFrontmatter {
   category: string;
   emoji: string;
   title: string;
   summary: string;
+  tags: string[];
   date: string;
   html: string;
 }
 
-type Data = {
+export type Data = {
   allMarkdownRemark: {
     edges: {
       node: {
         fields: { slug: string };
         frontmatter: IFrontmatter;
       };
-    };
+    }[];
   };
 };
 
@@ -41,6 +42,7 @@ export default function List() {
               emoji
               title
               summary
+              tags
             }
           }
         }
