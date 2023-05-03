@@ -3,7 +3,7 @@ date: "2023-02-23"
 emoji: 🪄
 title: "S3로 스무스하게 프론트 배포하기"
 category: "study"
-summary: "AWS 정적 웹사이트 호스팅"
+summary: "[배포 1단계] AWS 정적 웹사이트 호스팅"
 tags: ["web", "manual", "AWS", "배포"]
 ---
 
@@ -59,3 +59,8 @@ AWS는 Amazon Web Services 약자입니다. Amazon? 맞습니다, 그 아마존�
 이제 여러분은 AWS S3를 이용해 웹사이트를 호스팅할 수 있게 되었습니다. AWS는 12개월 동안 프리티어를 제공하여 합리적인 가격에 내가 만든 서비스를 인터넷 세상에 배포할 수 있습니다! (광고 아님 🤔)
 
 ![internet-meme](https://images.squarespace-cdn.com/content/v1/61004d79242dd506873b769a/4a1da6a9-3968-4a27-9a6b-c4f5731d37c8/online.gif)
+
+#### [연관 글] 리액트를 스무스하게 배포하는 법
+
+- [S3로 스무스하게 프론트 배포하기](https://sol-pine.github.io/react-deploy-with-s3/)
+- [CloudFront를 이용해 HTTPS 적용하기](https://sol-pine.github.io/aws-cloudfront/)
