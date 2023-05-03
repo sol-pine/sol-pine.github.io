@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
-import React from "react";
+import React, { useMemo } from "react";
 
 type Props = {
   emoji: string;
@@ -11,6 +11,8 @@ type Props = {
 };
 
 export default function Title({ emoji, date, title, summary, tags }: Props) {
+  const sortedTags = useMemo(() => tags.sort(), []);
+
   return (
     <Base>
       <div className="emoji">{emoji}</div>
@@ -18,7 +20,7 @@ export default function Title({ emoji, date, title, summary, tags }: Props) {
       <div className="title">{title}</div>
       <div className="sm">{summary}</div>
       <section>
-        {tags.map(tag => (
+        {sortedTags.map(tag => (
           <Link className="tag" key={tag} to={`/tag/?tag=${tag}`}>
             #{tag}
           </Link>
