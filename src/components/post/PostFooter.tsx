@@ -38,12 +38,15 @@ export default function PostFooter({ currentSlug, slugs }: Props) {
 
 const Base = styled.div`
   margin-top: 60px;
+  p {
+    color: #6a737d;
+  }
   .sectionWrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 14px;
     font-weight: 400;
   }
